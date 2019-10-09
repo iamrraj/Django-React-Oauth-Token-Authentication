@@ -9,9 +9,6 @@ import Swal from "sweetalert2";
 
 var CLIENT_ID = "softbike-web";
 var GRANT_TYPE = "password";
-// var username = "iamrraj";
-// var password = "Rahul@1995";
-// var username =
 // data: `grant_type=${GRANT_TYPE}&username=${username}&password=${password}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
 export class Auth extends Component {
   constructor(props) {
@@ -41,13 +38,13 @@ export class Auth extends Component {
       method: "post",
 
       // Set Access Token URL
-      url: `http://softbike.dev.myddp.eu/api/1/oauth/token/`,
+      url: `http://localhost:8000/api/1/oauth/token/`, // Change This To your original Outh toke url
 
       //Set Headers
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        Accept: "application/json"
-        // "Cache-Control": "no-cache"
+        Accept: "application/json",
+        "Cache-Control": "no-cache"
       },
 
       // Interpolate variables in the strings using Template Literals

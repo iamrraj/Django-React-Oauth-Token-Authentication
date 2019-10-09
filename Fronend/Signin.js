@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import Swal from "sweetalert2";
-// import Cookies from "universal-cookie";
 import head from "../img/head.png";
 import login from "../img/login.svg";
 import axios from "axios";
@@ -17,7 +15,6 @@ export class Signin extends Component {
     this.redirect = this.redirect.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.handValidation = this.handValidation.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +33,6 @@ export class Signin extends Component {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json"
-        // Authorization:
-        //   "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImlhbXJyYWoiLCJleHAiOjE1NzA1MjgzNTksImVtYWlsIjoicmFqcjk3NTU1QGdtYWlsLmNvbSJ9.Oh34D5WQeD0Ofsj7DgEkoVaIlhQCmWDGhB6MWX-C0LY"
       },
 
       url: "http://localhost:8001/token-auth/",
